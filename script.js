@@ -17,6 +17,7 @@ let MY_PORTPOLIO = (function(){
     }
 
     let populateHtml = () => {
+        populateNavHtml();
         populateProfileHtml();
         populateAboutHtml();
         populateExperienceHtml();
@@ -25,8 +26,8 @@ let MY_PORTPOLIO = (function(){
         populateFooterHtml();
     }
 
-    let appendSectionInBody = (id, html, isNeedFlexClass = true) => {
-        let contactSection = document.createElement('section');
+    let appendSectionInBody = (id, html, isNeedFlexClass = true, elem = 'section') => {
+        let contactSection = document.createElement(elem);
         contactSection.setAttribute('id', id);
         if(isNeedFlexClass) {
             contactSection.classList.add('flexM', 'fdirection');
@@ -35,6 +36,43 @@ let MY_PORTPOLIO = (function(){
 
         _app.appendChild(contactSection);
     }
+
+    let populateNavHtml = () => {
+        populateDeskTopNavHtml();
+        populateMobileNavHtml();
+    }
+
+    let getNavLinks = (isMobile) => {
+        return ['about', 'experience', 'projects', 'contact'].reduce((prev, next) => {
+            return prev += `<li><a class="text-cap" href="#${next}" ${isMobile ? 'onclick="toggleMenu()"' : ''}>${next}</a></li>`
+        }, '');
+    }
+
+    let populateDeskTopNavHtml = () => {
+        let html = `<div class="logo">Arivignesh M</div>
+                    <div>
+                    <ul class="nav-links">
+                        ${getNavLinks()}
+                    </ul>`;
+
+        appendSectionInBody('desktop-nav', html, false, 'nav');
+    };
+
+    let populateMobileNavHtml = () => {
+        let html = `<div class="logo">Arivignesh M</div>
+                    <div class="hamburger-menu">
+                        <div class="hamburger-icon" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="menu-links">
+                            ${getNavLinks(true)}
+                        </div>
+                    </div>`;
+
+        appendSectionInBody('hamburger-nav', html, false, 'nav');
+    };
 
     let populateProfileHtml = () => {
         let html = `<div class="section__pic-container">
