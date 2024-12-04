@@ -230,11 +230,11 @@ let MY_PORTPOLIO = (function(){
             gitHubLink : 'https://github.com/arivigneshm/bookstore',
             demoLink : 'https://arivignesh-bookstore.netlify.app/'
         }, {
-            src : './assets/project-2.png',
-            alt : 'Project 2',
-            title : 'Project 2',
-            gitHubLink : 'https://github.com/',
-            demoLink : 'https://github.com/'
+            src : './assets/autocomplete.jpeg',
+            alt : 'Autocomplete',
+            title : 'Auto complete',
+            gitHubLink : 'https://github.com/arivigneshm/autocomplete/',
+            demoLink : 'https://arivignesh-autocomplete.netlify.app/'
         }, {
             src : './assets/project-3.png',
             alt : 'Project 3',
