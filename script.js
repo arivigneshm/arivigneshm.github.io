@@ -222,8 +222,8 @@ let MY_PORTPOLIO = (function(){
                                 </div>
                                 <h2 class="experience-sub-title project-title">${next.title}</h2>
                                 <div class="btn-container">
-                                    <button class="btn btn-color-2 project-btn" onclick="location.href=${next.gitHubLink}"> Github </button>
-                                    <button class="btn btn-color-2 project-btn" onclick="location.href=${next.demoLink}"> Live Demo </button>
+                                    <button class="btn btn-color-2 project-btn" onclick="window.open('${next.gitHubLink}')"> Github </button>
+                                    <button class="btn btn-color-2 project-btn" onclick="window.open('${next.demoLink}')"> Live Demo </button>
                                 </div>
                             </div>`
         }, html);
