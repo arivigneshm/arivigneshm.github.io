@@ -236,11 +236,11 @@ let MY_PORTPOLIO = (function(){
             gitHubLink : 'https://github.com/arivigneshm/autocomplete/',
             demoLink : 'https://arivignesh-autocomplete.netlify.app/'
         }, {
-            src : './assets/project-3.png',
-            alt : 'Project 3',
-            title : 'Project 3',
-            gitHubLink : 'https://github.com/',
-            demoLink : 'https://github.com/'
+            src : './assets/weather-app.png',
+            alt : 'Weather app',
+            title : 'Weather app',
+            gitHubLink : 'https://github.com/arivigneshm/weatherapp',
+            demoLink : 'https://arivigneshm-weatherapp.netlify.app/'
         }]
 
 
